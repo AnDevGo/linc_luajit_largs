@@ -11,13 +11,13 @@
 	</files>
 
 	<target id="haxe">
-		<flag value="-fstack-protector" if="mingw" />
+		<flag value="-fstack-protector" if="mingw || HXCPP_MINGW" />
 
-		<section if="mingw">
+		<section if="mingw || HXCPP_MINGW">
 			<lib name="${haxelib:linc_luajit}/project/luajit/lib/MinGW/libluajit.a" if="HXCPP_M64" />
 		</section>
 
-		<section if="windows" unless="mingw">
+		<section if="windows" unless="mingw || HXCPP_MINGW">
 			<lib name="${haxelib:linc_luajit}/project/luajit/lib/Windows/lua51.lib" if="HXCPP_M64" />
 		</section>
 
