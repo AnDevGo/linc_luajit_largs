@@ -6,7 +6,7 @@ package hxluajit;
 import hxluajit.Types;
 
 /**
- * Provides bindings to Lua's auxiliary library functions.
+ * Provides access to Lua's auxiliary library functions.
  */
 @:buildXml('<include name="${haxelib:linc_luajit}/project/Build.xml" />')
 @:include('lua.hpp')
