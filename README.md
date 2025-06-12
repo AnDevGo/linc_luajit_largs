@@ -1,4 +1,4 @@
-# linc_luajit-pk
+# linc_luajit-largs
 
 ![](https://img.shields.io/github/repo-size/mcagabe19/linc_luajit-legacy) ![](https://badgen.net/github/open-issues/mcagabe19/linc_luajit-legacy) ![](https://badgen.net/badge/license/MIT/green)
 
