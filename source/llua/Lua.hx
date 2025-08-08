@@ -207,15 +207,11 @@ extern class Lua {
 		Lua_helper.callbacks_function = f;
 	}
 
+	@:native('register_hxtrace_lib')
 	static function register_hxtrace_lib(l:State) : Void;
-	{
-		//lol
-	}
 
+	@:native('register_hxtrace_func')
 	static function register_hxtrace_func(f:cpp.Callable<String->Int>) : Void;
-	{
-		//lol
-	}
 }
 
 class Lua_helper {
@@ -241,6 +237,13 @@ class Lua_helper {
 
 		hxluajit.Lua.pushnil(L);
 		hxluajit.Lua.setglobal(L, key);
+	}
+
+	public static inline function register_hxtrace(l:State) : Void {
+
+		Lua.register_hxtrace_func(cpp.Callable.fromStaticFunction(print_function));
+		Lua.register_hxtrace_lib(l);
+
 	}
 
 	private static function callback_handler(L:cpp.RawPointer<Lua_State>):Int {
