@@ -206,6 +206,16 @@ extern class Lua {
 		@:privateAccess
 		Lua_helper.callbacks_function = f;
 	}
+
+	static function register_hxtrace_lib(l:State) : Void;
+	{
+		//lol
+	}
+
+	static function register_hxtrace_func(f:cpp.Callable<String->Int>) : Void;
+	{
+		//lol
+	}
 }
 
 class Lua_helper {
